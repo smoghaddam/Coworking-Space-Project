@@ -11,6 +11,10 @@ from config import app, db
 
 port_number = int(os.environ.get("APP_PORT", 5153))
 
+@app.route("/")
+def root():
+    return "This is my Coworking Space project - Sepid"
+
 @app.route("/health_check")
 def health_check():
     return "ok"
