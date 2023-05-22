@@ -36,4 +36,4 @@ RUN pip install -r requirements.txt
 COPY ./analytics .
 
 # Start the database and Flask application
-CMD service postgresql start && python app.py && export DB_USER=DB_USERNAME && export DB_PASS=DB_PASSWORD
+CMD service postgresql start && python app.py && export DB_USERNAME=DB_USERNAME && export DB_USERNAME=DB_PASSWORD
