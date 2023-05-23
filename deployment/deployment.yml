@@ -11,7 +11,6 @@ metadata:
 ## Define the desired configuration for the Deployment resource.
 spec:
   ## Set the number of replicas.
-  ## This will create a ReplicaSet that will manage 1 pods of the coworking-project application.
   replicas: 1
   ## Identify the pods managed by this Deployment using the following selectors.
   ## In this case, all pods with the label `coworking-project`.
@@ -28,7 +27,6 @@ spec:
   ## Set the configuration for the pods.
   template:
     ## Define the identifiable metadata for the pods.
-    ## For example, all pods should have the label `coworking-project`
     metadata:
       labels:
         app: coworking-project
@@ -36,7 +34,6 @@ spec:
     spec:
       containers:
         ## Set the image to be executed inside the container and image pull policy
-        ## In this case, run the `coworking-project` application in version v2.0.0 and
         ## only pull the image if it's not available on the current host.
       - image: sepid/coworking-project:latest
         imagePullPolicy: Always
